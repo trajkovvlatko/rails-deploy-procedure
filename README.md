@@ -1,4 +1,4 @@
-rails-deploy-procedure
+### Step by step Ruby on Rails deploy to VPS with Apache and passenger
 ======================
 
 This is step by step procedure that I use to deploy a rails application on an Ubuntu VPS.  
