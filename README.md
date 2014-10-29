@@ -4,18 +4,18 @@ rails-deploy-procedure
 This is step by step procedure that I use to deploy a rails application on an Ubuntu VPS.  
 Depending on the gems and versions, it may vary.
 
-# Add user
-## login with root
+## Add user
+### login with root
 
 adduser rails
 
 visudo
 
-## Logout and login with user rails
+### Logout and login with user rails
 
 mkdir apps; cd apps
 
-# Install rvm and rails
+## Install rvm and rails
 
 \curl -sSL https://get.rvm.io | bash -s stable --rails
 
@@ -27,13 +27,13 @@ rvm install ruby-2.1.2
 
 rvm use ruby-2.1.2
 
-# Git
+## Git
 
 sudo apt-get install git
 
 git clone https://username@bitbucket.org/username/my_app.git
 
-# Postgres
+## Postgres
 
 http://www.cyberciti.biz/faq/howto-add-postgresql-user-account/
 
@@ -56,7 +56,7 @@ exit
 sudo vim /etc/postgresql/9.3/main/pg_hba.conf
 
 
-## Change peer to md5
+### Change peer to md5
 local   all             postgres                                md5
 local   all             all                                     md5
 
