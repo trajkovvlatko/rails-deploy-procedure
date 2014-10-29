@@ -5,7 +5,7 @@ This is step by step procedure that I use to deploy a rails application on an Ub
 Depending on the gems and versions, it may vary.
 
 # Add user
-# login with root
+## login with root
 adduser rails
 visudo
 # Logout and login with user rails
