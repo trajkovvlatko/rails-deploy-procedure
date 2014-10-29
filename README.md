@@ -52,7 +52,7 @@ exit
 
 sudo vim /etc/postgresql/9.3/main/pg_hba.conf
 
-###### Change peer to md5
+##### Change peer to md5
 local   all             postgres                                md5
 
 local   all             all                                     md5
@@ -139,19 +139,19 @@ mv my_app my_app_git
 
 #### Deploy
 
-###### On server
+##### On server
 
 vim .ssh/authorized_keys
 
-###### Add your public key from the local machine to authorized_keys on server
+##### Add your public key from the local machine to authorized_keys on server
 
-###### Generate public key on server and add it to github/bitbucket deploy keys
+##### Generate public key on server and add it to github/bitbucket deploy keys
 
 ssh-keygen
 
 cat .ssh/id_rsa.pub
 
-###### From local machine
+##### From local machine
 
 cap deploy:setup
 
@@ -159,7 +159,7 @@ cap deploy:check
 
 cap deploy
 
-###### Create shared files
+##### Create shared files
 
 cd apps/my_app/shared
 
@@ -167,6 +167,6 @@ mkdir config
 
 vim database.yml
 
-###### Create production database in postgres
+##### Create production database in postgres
 
-###### rake db:migrate
+rake db:migrate
