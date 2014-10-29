@@ -6,34 +6,57 @@ Depending on the gems and versions, it may vary.
 
 # Add user
 ## login with root
+
 adduser rails
+
 visudo
-# Logout and login with user rails
+
+## Logout and login with user rails
+
 mkdir apps; cd apps
 
 # Install rvm and rails
+
 \curl -sSL https://get.rvm.io | bash -s stable --rails
+
 source /home/rails/.rvm/scripts/rvm
+
 cd app/my_app
+
 rvm install ruby-2.1.2
+
 rvm use ruby-2.1.2
 
 # Git
+
 sudo apt-get install git
+
 git clone https://username@bitbucket.org/username/my_app.git
 
 # Postgres
+
 http://www.cyberciti.biz/faq/howto-add-postgresql-user-account/
+
 sudo apt-get install postgresql postgresql-contrib postgres-client
+
 sudo su - postgres
+
 psql template1
+
 CREATE USER tom WITH PASSWORD 'myPassword';
+
 CREATE DATABASE jerry;
+
 GRANT ALL PRIVILEGES ON DATABASE jerry to tom;
+
 \q
+
 exit
+
 sudo vim /etc/postgresql/9.3/main/pg_hba.conf
-# Change peer to md5
+
+
+## Change peer to md5
 local   all             postgres                                md5
 local   all             all                                     md5
 
